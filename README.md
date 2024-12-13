@@ -1,3 +1,3 @@
-## picgo-plugin-webpex
+## picgo-plugin-pic2webp
 
-图片上传前转 webpex
+pic to webp
