@@ -14,7 +14,7 @@ const changeExt = (pic, oe) => {
 
   const po = path.parse(pic);
   po.ext = oe;
-
+  delete po.base;
   return path.format(po);
 }
 
@@ -80,14 +80,12 @@ const afterUploadPlugins = {
   }
 };
 
-const registerPlugin = (ctx: IPicGo) => {
+export = (ctx: IPicGo) => {
   const register = () => {
       ctx.helper.beforeTransformPlugins.register(PLUGIN_NAME, beforeTransformPlugins);
       ctx.helper.afterUploadPlugins.register(PLUGIN_NAME, afterUploadPlugins);
   }
   return {
-    register,
+    register
   }
 }
-
-export default registerPlugin

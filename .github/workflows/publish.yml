@@ -12,8 +12,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
+      - name: Install npm
+        uses: npm/action-setup@v4
         with:
           version: 9
 
@@ -22,13 +22,13 @@ jobs:
         with:
           node-version: 20
           registry-url: 'https://registry.npmjs.org'
-          cache: 'pnpm'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: pnpm install
+        run: npm install
 
       - name: Build
-        run: pnpm run build && ls -lah dist/
+        run: npm run build && ls -lah dist/
 
       - name: Publish
         id: publish
