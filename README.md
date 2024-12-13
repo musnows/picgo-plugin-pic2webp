@@ -1,3 +1,11 @@
 ## picgo-plugin-pic2webp
 
-pic to webp
+Images convert webp before upload.
+### Install
+```bash
+picgo add pic2webp
+```
+### Usage
+```bash
+picgo use plugins
+```
