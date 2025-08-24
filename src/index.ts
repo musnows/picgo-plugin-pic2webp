@@ -38,7 +38,7 @@ const beforeTransformPlugins = {
         }
 
         const webp = changeExt(pic, '.webp');
-        await webp_converter.cwebp(pic, webp, '-q 80', '-v');
+        await webp_converter.cwebp(pic, webp, '-q 90', '-v');
         uploads.push(webp);
       } catch (err) {
         ctx.log.error(`Error converting ${pic} to webp: ${err.message || err}`);
